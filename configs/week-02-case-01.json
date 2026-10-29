@@ -1,0 +1,9 @@
+{
+  "episode_id": "spatial-pilot-01",
+  "task_name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate",
+  "instruction": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+  "initial_state_index": 1,
+  "environment_seed": 42,
+  "policy_seed": 42,
+  "max_steps": 280
+}

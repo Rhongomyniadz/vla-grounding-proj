@@ -1,0 +1,14 @@
+{
+  "expected_gpu": "NVIDIA GeForce RTX 5080",
+  "cuda_device": 0,
+  "minimum_free_disk_gib": 100,
+  "suite": "libero_spatial",
+  "task_id": 0,
+  "seed": 42,
+  "image_size": 256,
+  "smoke_steps": 16,
+  "control_fps": 20,
+  "policy_revision": "a24f1f380461b665158d52acd140152c79e8b36d",
+  "vlm_revision": "main",
+  "simulator_assets_revision": "main"
+}

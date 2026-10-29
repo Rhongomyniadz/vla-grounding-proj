@@ -2,7 +2,7 @@
 
 Explore how a simulated robot follows language instructions using SmolVLA, LeRobot, and LIBERO. The goal is to learn robotics and embodied AI while building a reproducible evaluation and fine-tuning project.
 
-**Status:** planning stage. This repository contains the project brief, bilingual implementation plan, and bilingual weekly learning plans. Simulation code, training pipelines, and experimental results are not implemented yet.
+**Status:** Week 1 source now includes observation inspection, and Week 2's canonical episode loop, chunk/action counters and aligned recording are implemented. Windows authoring and portable evidence smoke checks pass. Real RTX 5080/WSL2 setup, Week 1 runtime gates and Week 2 pilot rollouts remain unverified; no experimental results are claimed.
 
 ## Questions
 
@@ -23,23 +23,29 @@ Start by running the pretrained SmolVLA LIBERO checkpoint, then build controlled
 
 The final deliverable is a portfolio containing reproducible code, experiment manifests, machine-readable results, annotated rollout videos, plots with uncertainty estimates, and a report explaining the findings and limitations. A well-supported negative result counts as a successful outcome.
 
-## Learning and agent assistance
+## Agent execution and explanations
 
-The learner owns the research decisions, core experimental logic, and interpretation. The coding agent supports engineering, explanations, debugging, and review. The [learning workflow](doc/IMPLEMENTATION_PLAN.en.md#1-working-method-and-ownership) defines responsibilities, independent exercises, and understanding checks.
+The agent owns all work, including environment setup, core implementation, experiment design within the agreed protocol, execution, debugging, validation, analysis, interpretation and reproduction. User review and learning exercises are optional. The [working method](doc/IMPLEMENTATION_PLAN.en.md#1-working-method-and-ownership) defines ownership and evidence requirements.
+
+Read the design and code guide in [English](doc/CODE_GUIDE.en.md) or [简体中文](doc/CODE_GUIDE.zh-CN.md) for the rationale, module/function structure, interfaces, data flow and verification status. The agent updates both versions with every implementation change.
 
 ## Planned environment
 
-The target is a separate RTX 5080 machine running Ubuntu through WSL2, using the `lerobot/smolvla_libero` checkpoint. The [system implementation section](doc/IMPLEMENTATION_PLAN.en.md#2-system-implementation) specifies dependency versions, isolated simulator environments, resource requirements, and verification checks. Compatibility on the target machine has not been verified yet.
+Write and review code on the current Windows computer. Run simulation, model inference, dataset preparation through LeRobot, and training on the separate RTX 5080 computer in Ubuntu/WSL2, using the `lerobot/smolvla_libero` checkpoint. Review returned evidence and run portable analysis on the coding computer once its required dependencies are declared. Compatibility on the target machine has not been verified yet.
+
+The [two-computer workflow](doc/IMPLEMENTATION_PLAN.en.md#two-computer-development-and-execution) separates implementation progress from target verification. Each weekly plan identifies what can be prepared now, what must run on the target, and which evidence to return. Target-dependent checks remain open while you continue independent implementation work. The [environment guide](doc/ENVIRONMENT.en.md#handoff-for-every-execution-visit) defines how to transfer a reviewed source snapshot, rebuild target-local paths, and bring evidence back.
 
 ## Getting started
 
-Read the implementation plan in [English](doc/IMPLEMENTATION_PLAN.en.md) or [简体中文](doc/IMPLEMENTATION_PLAN.zh-CN.md), beginning with the first milestone. The first implementation task is a verified environment check followed by a single-episode rollout. Installation and execution commands will be documented after they work on the target machine.
+Read the implementation plan in [English](doc/IMPLEMENTATION_PLAN.en.md) or [简体中文](doc/IMPLEMENTATION_PLAN.zh-CN.md), beginning with the first milestone. Use the environment guide in [English](doc/ENVIRONMENT.en.md) or [简体中文](doc/ENVIRONMENT.zh-CN.md) for authoring checks, transferring work between machines, and the target setup/check sequence. It explicitly distinguishes locally verified behavior from target commands awaiting verification.
+
+Use the [code guide](doc/CODE_GUIDE.en.md#week-1-inspection-and-week-2-episode-implementation) for the implemented inspector and canonical episode loop. The [environment guide](doc/ENVIRONMENT.en.md#week-1-audit-and-week-2-pilot-commands) gives their commands and verification limits. Controlled manifest execution remains later work.
 
 Follow the [twelve-week milestones](doc/IMPLEMENTATION_PLAN.en.md#4-twelve-week-milestones) and [completion criteria](doc/IMPLEMENTATION_PLAN.en.md#5-validation-and-completion-criteria) for the working schedule, scope boundaries, and required portfolio evidence.
 
 ## Weekly work
 
-Use the detailed weekly checklists in [English](weekly-plan/README.en.md) or [简体中文](weekly-plan/README.zh-CN.md). Each week includes five work sessions, your own coding exercises, agent-assisted tasks, deliverables, and understanding checks.
+Use the detailed weekly guides in [English](weekly-plan/README.en.md) or [简体中文](weekly-plan/README.zh-CN.md). Each week includes detailed implementation tasks covering components, inputs/outputs, error handling, verification and documentation, followed by five step-by-step sessions. Code/document reading paths, reading order and understanding goals accompany the required evidence and troubleshooting guidance.
 
 ## References
 
